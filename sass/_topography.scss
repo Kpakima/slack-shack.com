@@ -1,0 +1,26 @@
+.heading-primary {
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  font-size: 5.4rem;
+  line-height: 1;
+  letter-spacing: -2px;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  background-image: linear-gradient(to right, $color-primary, $color-black);
+  background-clip: text;
+  color: transparent;
+
+  @include bp-medium {
+    font-size: 5rem;
+  }
+}
+
+.heading-secondary {
+  display: inline-block;
+  font-size: 3.6rem;
+  line-height: 1;
+  letter-spacing: -2px;
+  background: linear-gradient(to right, $color-primary, $color-black);
+  color: transparent;
+  background-clip: text;
+}

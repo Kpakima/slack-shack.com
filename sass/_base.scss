@@ -1,0 +1,41 @@
+*::before,
+*::after,
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include bp-medium {
+    font-size: 56.25%;
+  }
+
+  @include bp-small {
+    font-size: 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $color-white;
+  overflow-x: hidden;
+  line-height: 1.6;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: $color-black;
+  z-index: -1;
+}
+
+*::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+// *:focus {
+//   outline: 4px solid $color-primary;
+//   outline-offset: 8px;
+// }

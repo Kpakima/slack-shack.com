@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slackshack&mdash;All your favorite meals are in one place!</title>
+
+    <!-- scripts -->
+    <script src="./js/script.js" defer></script>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./img/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="./img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./img/faviocn/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="./img/favicon/site.webmanifest" />
+
+    <!-- style sheets -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- header components -->
+
+    <header class="header">
+      <a href="index.html">
+        <img class="header__logo" src="./img/logo.png" alt="Slack Shack Logo" />
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a
+              href="index.html"
+              class="header__nav-link header__nav-link--active"
+              >Home</a
+            >
+          </li>
+          <li class="header__nav-item">
+            <a href="index.html" class="header__nav-link">Menu</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="index.html" class="header__nav-link">About Us</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="index.html" class="header__nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__cart-wish-box header__icons-box">
+        <div class="header__call-now-box">
+          <span class="header__call-now-title"> Call us for order </span>
+          <span class="header__call-now-num">0775932702</span>
+        </div>
+        <div class="header__cart-box header__icon-box">
+          <span class="header__icon-text">32</span>
+          <svg class="header__icon">
+            <use xlink:href="./img/sprite.svg#icon-shopping-bag"></use>
+          </svg>
+        </div>
+        <div class="header__wish-box header__icon-box">
+          <span class="header__icon-text">22</span>
+          <svg class="header__icon">
+            <use xlink:href="./img/sprite.svg#icon-heart"></use>
+          </svg>
+        </div>
+
+        <a href="#" class="btn btn-primary">Order Now</a>
+        <button
+          class="header__mobile-menu-btn"
+          type="button"
+          aria-label="Mobile Navigation Button"
+        >
+          <svg
+            class="header__mobile-menu-icon header__mobile-menu-btn-icon--burger"
+          >
+            <use xlink:href="./img/sprite.svg#icon-menu"></use>
+          </svg>
+          <svg
+            class="header__mobile-menu-icon header__mobile-menu-btn-icon--close"
+          >
+            <use xlink:href="./img/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- hero components -->
+    <section class="hero">
+      <div class="hero__container">
+        <div class="hero__text-box">
+          <h1 class="heading-primary">
+            Welcome to slack shack all your favorite's is here
+          </h1>
+          <p class="hero__text">
+            elit maxime mole stiae magnam alias maiores moles tias omnis
+            explicabo nulla, earum esse dolorum voluptas quis?
+          </p>
+          <div class="hero__btn-box">
+            <a href="#" class="btn btn-primary">Order Now</a>
+            <a href="#" class="btn btn-secondary">Book Table</a>
+          </div>
+        </div>
+        <div class="hero__img-box">
+          <img
+            src="./img/burger-2.png"
+            alt=""
+            class="hero__img hero__img--big"
+          />
+          <img
+            src="./img/burger.png"
+            alt=""
+            class="hero__img hero__img--small"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- category search components -->
+    <section class="category">
+      <span class="category__heading">Search By Category &darr;</span>
+      <div class="category__container">
+        <button
+          class="category__slide-btn category__prev-btn"
+          id="prev-slide"
+          aria-label="Left Arrow"
+        >
+          <svg class="category__slide-icon">
+            <use xlink:href="./img/sprite.svg#icon-arrow-long-left"></use>
+          </svg>
+        </button>
+        <div class="category__slider">
+          <div class="category__slide">
+            <img
+              class="category__img"
+              src="./img/cold-drink.png"
+              alt="soft drinks"
+            />
+            <span class="category__name">Soft Drinks</span>
+          </div>
+          <div class="category__slide">
+            <img class="category__img" src="./img/burger.png" alt="Burger" />
+            <span class="category__name">Burger</span>
+          </div>
+          <div class="category__slide">
+            <img
+              class="category__img"
+              src="./img/french-fry.png "
+              alt="French Fry"
+            />
+            <span class="category__name">Soft Drinks</span>
+          </div>
+          <div class="category__slide">
+            <img class="category__img" src="./img/pasta.png" alt="Pasta" />
+            <span class="category__name">Pasta</span>
+          </div>
+          <div class="category__slide">
+            <img class="category__img" src="./img/sandwich.png" alt=Sandwich" />
+            <span class="category__name">Soft Drinks</span>
+          </div>
+          <div class="category__slide">
+            <img class="category__img" src="./img/combo-1.png" alt="Combo" />
+            <span class="category__name">Soft Drinks</span>
+          </div>
+          <div class="category__slide">
+            <img
+              class="category__img"
+              src="./img/french-fry.png  "
+              alt="French Fry"
+            />
+            <span class="category__name">Soft Drinks</span>
+          </div>
+        </div>
+        <button
+          class="category__slide-btn category__next-btn"
+          id="next-slide"
+          aria-label="Right Arrow"
+        >
+          <svg class="category__slide-icon">
+            <use xlink:href="./img/sprite.svg#icon-arrow-long-right"></use>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Our popular meals components -->
+    <section class="meal">
+      <div class="u-center-text u-margin-bottom-large">
+        <h2 class="heading-secondary">Our Delicious Meals</h2>
+      </div>
+      <div class="meal__container">
+        <div class="meal__item">
+          <button class="meal__btn-wish" aria-label="Add To Wishllist">
+            <svg class="meal__btn-wish-icon meal__btn-wish-icon--outline">
+              <use xlink:href="./img/sprite.svg#icon-heart-outlined"></use>
+            </svg>
+            <svg class="meal__btn-wish-icon meal__btn-wish-icon--filled">
+              <use xlink:href="./img/sprite.svg#icon-heart"></use>
+            </svg>
+          </button>
+          <img src="./img/burger-2.png" alt="Burger" class="meal__img" />
+          <span class="meal__name">Hamburger</span>
+          <span class="meal__discount">Get a 20% discount on First Order</span>
+          <span class="meal__price">$23</span>
+          <div class="meal__btn-box">
+            <a href="#" class="meal__btn meal__btn-add-to-cart">
+              <svg class="meal__btn-icon">
+                <use xlink:href="./img/sprite.svg#icon-shopping-bag"></use>
+              </svg>
+              Add
+            </a>
+            <a href="#" class="meal__btn meal__btn-buy">Buy</a>
+          </div>
+        </div>
+        <div class="meal__item">
+          <button class="meal__btn-wish" aria-label="Add To Wishlist">
+            <svg class="meal__btn-wish-icon meal__btn-wish-icon--outline">
+              <use xlink:href="./img/sprite.svg#icon-heart-outlined"></use>
+            </svg>
+            <svg class="meal__btn-wish-icon meal__btn-wish-icon--filled">
+              <use xlink:href="./img/sprite.svg#icon-heart"></use>
+            </svg>
+          </button>
+          <img
+            src="./img/french-fry.png"
+            alt="French Fried"
+            class="meal__img"
+          />
+          <span class="meal__name">French Fried</span>
+          <span class="meal__discount">Get a 20% discount on First Order</span>
+          <span class="meal__price">$33</span>
+          <div class="meal__btn-box">
+            <a href="#" class="meal__btn meal__btn-add-to-cart">
+              <svg class="meal__btn-icon">
+                <use xlink:href="./img/sprite.svg#icon-shopping-bag"></use>
+              </svg>
+              Add
+            </a>
+            <a href="#" class="meal__btn meal__btn-buy">Buy</a>
+          </div>
+        </div>
+        <div class="meal__item">
+          <button class="meal__btn-wish" aria-label="Add To Wishlist">
+            <svg class="meal__btn-wish-icon meal__btn-wish-icon--outline">
+              <use xlink:href="./img/sprite.svg#icon-heart-outlined"></use>
+            </svg>
+            <svg class="meal__btn-wish-icon meal__btn-wish-icon--filled">
+              <use xlink:href="./img/sprite.svg#icon-heart"></use>
+            </svg>
+          </button>
+          <img src="./img/combo-1.png" alt="Combo" class="meal__img" />
+          <span class="meal__name">Combo</span>
+          <span class="meal__discount">Get a 20% discount on First Order</span>
+          <span class="meal__price">$20</span>
+          <div class="meal__btn-box">
+            <a href="#" class="meal__btn meal__btn-add-to-cart">
+              <svg class="meal__btn-icon">
+                <use xlink:href="./img/sprite.svg#icon-shopping-bag"></use>
+              </svg>
+              Add
+            </a>
+            <a href="#" class="meal__btn meal__btn-buy">Buy</a>
+          </div>
+        </div>
+        <div class="meal__item">
+          <button class="meal__btn-wish" aria-label="Add To Wishlist">
+            <svg class="meal__btn-wish-icon meal__btn-wish-icon--outline">
+              <use xlink:href="./img/sprite.svg#icon-heart-outlined"></use>
+            </svg>
+            <svg class="meal__btn-wish-icon meal__btn-wish-icon--filled">
+              <use xlink:href="./img/sprite.svg#icon-heart"></use>
+            </svg>
+          </button>
+          <img src="./img/pasta.png" alt="Pasta" class="meal__img" />
+          <span class="meal__name">Pasta</span>
+          <span class="meal__discount">Get a 20% discount on First Order</span>
+          <span class="meal__price">$12</span>
+          <div class="meal__btn-box">
+            <a href="#" class="meal__btn meal__btn-add-to-cart">
+              <svg class="meal__btn-icon">
+                <use xlink:href="./img/sprite.svg#icon-shopping-bag"></use>
+              </svg>
+              Add
+            </a>
+            <a href="#" class="meal__btn meal__btn-buy">Buy</a>
+          </div>
+        </div>
+        <div class="meal__item">
+          <button class="meal__btn-wish" aria-label="Add To Wishlist">
+            <svg class="meal__btn-wish-icon meal__btn-wish-icon--outline">
+              <use xlink:href="./img/sprite.svg#icon-heart-outlined"></use>
+            </svg>
+            <svg class="meal__btn-wish-icon meal__btn-wish-icon--filled">
+              <use xlink:href="./img/sprite.svg#icon-heart"></use>
+            </svg>
+          </button>
+          <img
+            src="./img/sandwich.png"
+            alt="Sandwich Bread"
+            class="meal__img"
+          />
+          <span class="meal__name">Sandwich Bread</span>
+          <span class="meal__discount">Get a 20% discount on First Order</span>
+          <span class="meal__price">$13</span>
+          <div class="meal__btn-box">
+            <a href="#" class="meal__btn meal__btn-add-to-cart">
+              <svg class="meal__btn-icon">
+                <use xlink:href="./img/sprite.svg#icon-shopping-bag"></use>
+              </svg>
+              Add
+            </a>
+            <a href="#" class="meal__btn meal__btn-buy">Buy</a>
+          </div>
+        </div>
+        <div class="meal__item">
+          <button class="meal__btn-wish" aria-label="Add To Wishlist">
+            <svg class="meal__btn-wish-icon meal__btn-wish-icon--outline">
+              <use xlink:href="./img/sprite.svg#icon-heart-outlined"></use>
+            </svg>
+            <svg class="meal__btn-wish-icon meal__btn-wish-icon--filled">
+              <use xlink:href="./img/sprite.svg#icon-heart"></use>
+            </svg>
+          </button>
+          <img
+            src="./img/cold-drink.png"
+            alt="Cold Soft Drink"
+            class="meal__img"
+          />
+          <span class="meal__name">Coca Cola</span>
+          <span class="meal__discount">Get a 20% discount on First Order</span>
+          <span class="meal__price">$10</span>
+          <div class="meal__btn-box">
+            <a href="#" class="meal__btn meal__btn-add-to-cart">
+              <svg class="meal__btn-icon">
+                <use xlink:href="./img/sprite.svg#icon-shopping-bag"></use>
+              </svg>
+              Add
+            </a>
+            <a href="#" class="meal__btn meal__btn-buy">Buy</a>
+          </div>
+        </div>
+        <div class="meal__item">
+          <button class="meal__btn-wish" aria-label="Add To Wishlist">
+            <svg class="meal__btn-wish-icon meal__btn-wish-icon--outline">
+              <use xlink:href="./img/sprite.svg#icon-heart-outlined"></use>
+            </svg>
+            <svg class="meal__btn-wish-icon meal__btn-wish-icon--filled">
+              <use xlink:href="./img/sprite.svg#icon-heart"></use>
+            </svg>
+          </button>
+          <img src="./img/combo-2.png" alt="Combo 2x" class="meal__img" />
+          <span class="meal__name">Combo 2x</span>
+          <span class="meal__discount">Get a 20% discount on First Order</span>
+          <span class="meal__price">$43</span>
+          <div class="meal__btn-box">
+            <a href="#" class="meal__btn meal__btn-add-to-cart">
+              <svg class="meal__btn-icon">
+                <use xlink:href="./img/sprite.svg#icon-shopping-bag"></use>
+              </svg>
+              Add
+            </a>
+            <a href="#" class="meal__btn meal__btn-buy">Buy</a>
+          </div>
+        </div>
+        <div class="meal__item">
+          <button class="meal__btn-wish" aria-label="Add To Wishlist">
+            <svg class="meal__btn-wish-icon meal__btn-wish-icon--outline">
+              <use xlink:href="./img/sprite.svg#icon-heart-outlined"></use>
+            </svg>
+            <svg class="meal__btn-wish-icon meal__btn-wish-icon--filled">
+              <use xlink:href="./img/sprite.svg#icon-heart"></use>
+            </svg>
+          </button>
+          <img src="./img/burger-2.png" alt="Burger" class="meal__img" />
+          <span class="meal__name">Hamburger</span>
+          <span class="meal__discount">Get a 20% discount on First Order</span>
+          <span class="meal__price">$23</span>
+          <div class="meal__btn-box">
+            <a href="#" class="meal__btn meal__btn-add-to-cart">
+              <svg class="meal__btn-icon">
+                <use xlink:href="./img/sprite.svg#icon-shopping-bag"></use>
+              </svg>
+              Add
+            </a>
+            <a href="#" class="meal__btn meal__btn-buy">Buy</a>
+          </div>
+        </div>
+      </div>
+      <div class="u-center-text u-margin-top-large">
+        <a href="#" class="btn meal__btn-all-meal"
+          >View All Meals <span class="meal__btn-all-meal--arr">&rarr;</span></a
+        >
+      </div>
+    </section>
+
+    <!-- delivery man details -->
+    <section class="delivery">
+      <div class="delivery__container">
+        <div class="delivery__text-box">
+          <div class="u-margin-bottom-md">
+            <h2 class="heading-secondary">Choose your favourite meal</h2>
+          </div>
+          <p class="delivery__text">
+            impedit quia tempore Quaerat quidem beatae dolorum tenetur, animi
+            quidem provident! Minima voluptate, libero cumque sequi quo
+            suscipit.
+          </p>
+        </div>
+        <img
+          src="./img/delivery-man.png"
+          alt="Delivery Man"
+          class="delivery__img"
+        />
+        <div class="delivery__text-box">
+          <div class="u-margin-bottom-md">
+            <h2 class="heading-secondary">
+              Order Online And Get Fast Delivery
+            </h2>
+          </div>
+          <p class="delivery__text">
+            Quaerat quidem impedit quia tempore beatae dolorum tenetur, animi
+            quidem provident! Minima voluptate, libero cumque sequi quo
+            suscipit.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- The about section components -->
+    <section class="about">
+      <div class="about__container">
+        <img src="./img/combo-1-L.png" alt="Combo" class="about__img" />
+        <div class="about__text-box">
+          <div class="u-margin-bottom-md">
+            <h2 class="heading-secondary">About Slack Shack</h2>
+          </div>
+          <p class="about__text">
+            voluptas minus ut beatae, expedita pariatur quo at temporibus cum
+            quod illum atque consectetur perferendis sequi harum maxime quasi
+            sunt rem, eaque officiis unde delectus explicabo ex! Ullam inventore
+            facere repellendus?
+          </p>
+          <ul class="about__list">
+            <li class="about__list-item">Delicious & Healthy meal</li>
+            <li class="about__list-item">Best prices & offers</li>
+            <li class="about__list-item">Made by fresh ingredients</li>
+          </ul>
+
+          <a href="#" class="btn about__btn-read-more"
+            >Read More<span>&rarr;</span></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- The testimonials section components -->
+    <section class="testimonials">
+      <div class="u-center-text u-margin-bottom-large">
+        <h2 class="heading-secondary">Our Customer Feedbacks</h2>
+      </div>
+      <div class="testimonials__container">
+        <div class="testimonials__slider">
+          <div class="testimonials__testimonial testimonials__testimonial-1">
+            <span class="testimonials__title"> Best Meal Ever Eaten </span>
+            <p class="testimonials__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+              laborum facere in eaque quia accusamus error expedita rerum illo
+              architecto.
+            </p>
+            <div class="testimonials__profile">
+              <img
+                src="./img/testimonial-1.jpg"
+                alt="Mariam Burger"
+                class="testimonials__img"
+              />
+              <span class="testimonials__name">Mariam Burger</span>
+            </div>
+          </div>
+          <div class="testimonials__testimonial testimonials__testimonial-1">
+            <span class="testimonials__title"> Best Meal Ever Eaten </span>
+            <p class="testimonials__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+              laborum facere in eaque quia accusamus error expedita rerum illo
+              architecto.
+            </p>
+            <div class="testimonials__profile">
+              <img
+                src="./img/testimonial-2.jpg"
+                alt="Henry Reeves"
+                class="testimonials__img"
+              />
+              <span class="testimonials__name">Henry Reeves</span>
+            </div>
+          </div>
+        </div>
+        <button
+          class="testimonials__slider-btn testimonials__prev-slide-btn"
+          aria-label="Left Arrow"
+        >
+          <svg class="testimonials__slide-icon">
+            <use xlink:href="./img/sprite.svg#icon-arrow-long-left"></use>
+          </svg></button
+        ><button
+          class="testimonials__slider-btn testimonials__next-slide-btn"
+          aria-label="Right Arrow"
+        >
+          <svg class="testimonials__slide-icon">
+            <use xlink:href="./img/sprite.svg#icon-arrow-long-right"></use>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- the lastest meal component section -->
+    <section class="lastest">
+      <div class="u-center-text u-margin-bottom-large">
+        <h2 class="heading-secondary">Our Latest Food News</h2>
+      </div>
+      <div class="lastest__container">
+        <div class="lastest__meal">
+          <img src="./img/news-1.jpg" alt="Pasta" class="lastest__img" />
+          <div class="lastest__text-box">
+            <span class="lastest__title"
+              >Pancake quos voluptas unde officiis?</span
+            >
+            <p class="lastest__text">
+              suscipit autem quidem totam temporibus eligendi necessitatibus.
+              Sapiente aspernatur recusandae fuga laboriosam molestias.
+            </p>
+            <a href="#" class="lastest__btn-read-more btn"
+              >Read More<span>&rarr;</span></a
+            >
+          </div>
+        </div>
+        <div class="lastest__meal">
+          <img src="./img/news-2.jpg" alt="Pasta" class="lastest__img" />
+          <div class="lastest__text-box">
+            <span class="lastest__title"
+              >Pancake quos voluptas unde officiis?</span
+            >
+            <p class="lastest__text">
+              suscipit autem quidem totam temporibus eligendi necessitatibus.
+              Sapiente aspernatur recusandae fuga laboriosam molestias.
+            </p>
+            <a href="#" class="lastest__btn-read-more btn"
+              >Read More<span>&rarr;</span></a
+            >
+          </div>
+        </div>
+        <div class="lastest__meal">
+          <img src="./img/pasta-2.jpg" alt="Pasta" class="lastest__img" />
+          <div class="lastest__text-box">
+            <span class="lastest__title"
+              >Pancake quos voluptas unde officiis?</span
+            >
+            <p class="lastest__text">
+              suscipit autem quidem totam temporibus eligendi necessitatibus.
+              Sapiente aspernatur recusandae fuga laboriosam molestias.
+            </p>
+            <a href="#" class="lastest__btn-read-more btn"
+              >Read More<span>&rarr;</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- the gallery section components -->
+    <section class="gallery">
+      <div class="u-center-text u-margin-bottom-large">
+        <h2 class="heading-secondary">Food Gallery</h2>
+      </div>
+      <div class="gallery__container">
+        <figure class="gallery__item gallery__item--1">
+          <img
+            src="./img/burger.jpg"
+            alt="gallery imgage"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+          <img
+            src="./img/combo-1.jpg"
+            alt="gallery imgage"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--3">
+          <img
+            src="./img/combo-2.jpg"
+            alt="gallery imgage"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--4">
+          <img
+            src="./img/hot-dog.jpg"
+            alt="gallery imgage"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--5">
+          <img
+            src="./img/news-1.jpg"
+            alt="gallery imgage"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--6">
+          <img
+            src="./img/news-2.jpg"
+            alt="gallery imgage"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--7">
+          <img
+            src="./img/pasta-2.jpg"
+            alt="gallery imgage"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item-8">
+          <img
+            src="./img/pasta-3.jpg"
+            alt="gallery imgage"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--9">
+          <img src="./img/rice.jpg" alt="gallery imgage" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--10">
+          <img
+            src="./img/salad.jpg"
+            alt="gallery imgage"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--11">
+          <img
+            src="./img/spaghetti.jpg"
+            alt="gallery imgage"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--12">
+          <img
+            src="./img/salad-2.jpg"
+            alt="gallery imgage"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--13">
+          <img
+            src="./img/burger-2.png"
+            alt="gallery imgage"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--14">
+          <img src="./img/rice.jpg" alt="gallery imgage" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--15">
+          <img
+            src="./img/combo.jpg"
+            alt="gallery imgage"
+            class="gallery__img"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <!-- The footer section component -->
+    <footer class="footer">
+      <div class="footer__newsletter-container">
+        <div class="footer__newsletter-text-box">
+          <span class="footer__newsletter-heading">Subscription news</span>
+          <p class="footer__newsletter-text">
+            Subscribe to our daily news letter
+          </p>
+        </div>
+        <form method="post" class="footer__newsletter-form">
+          <input
+            type="email"
+            name="useremail"
+            id="useremail"
+            class="footer__newsletter-input"
+            placeholder="Email Address"
+            required
+          />
+          <button class="footer__newsletter-btn" type="reset">Subscribe</button>
+        </form>
+      </div>
+      <div class="footer__container">
+        <div class="footer__col footer__col--1">
+          <a href="index.html ">
+            <img
+              src="./img/logo.png "
+              alt="slack shack logo"
+              class="footer__logo"
+            />
+          </a>
+
+          <p class="footer__bio-text">
+            facere quia aliquam nesciunt adipisci iure hic reiciendis laudantium
+            placeat molestiae, fuga provident. Vero quos dolores ad?
+          </p>
+          <div class="footer__book">
+            <span class="footer__book-heading">Book a Table</span>
+            <span class="footer__book-num">0775932702</span>
+          </div>
+          <div class="footer__opening-hour">
+            <span class="footer__opening-hour-heading"> Opening Hours </span>
+            <span class="footer__opening-hour-time"> 80:00AM - 12:00PM</span>
+          </div>
+        </div>
+        <div class="footer__col footer__col--2">
+          <h3 class="footer__heading">Quick Links</h3>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-list-item">
+              <a href="#" class="footer__nav-list-link">About Us</a>
+            </li>
+            <li class="footer__nav-list-item">
+              <a href="#" class="footer__nav-list-link">Menu</a>
+            </li>
+            <li class="footer__nav-list-item">
+              <a href="#" class="footer__nav-list-link">testimonials</a>
+            </li>
+            <li class="footer__nav-list-item">
+              <a href="#" class="footer__nav-list-link">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col--3">
+          <h3 class="footer__heading">Our Menu</h3>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-list-item">
+              <a href="#" class="footer__nav-list-link">Burger</a>
+            </li>
+            <li class="footer__nav-list-item">
+              <a href="#" class="footer__nav-list-link">Dissert</a>
+            </li>
+            <li class="footer__nav-list-item">
+              <a href="#" class="footer__nav-list-link">Pizza</a>
+            </li>
+            <li class="footer__nav-list-item">
+              <a href="#" class="footer__nav-list-link">Pizza</a>
+            </li>
+            <li class="footer__nav-list-item">
+              <a href="#" class="footer__nav-list-link">Cold Drinks</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col--4">
+          <h3 class="footer__heading">Contact Us</h3>
+          <p class="footer__address">
+            Du-port Road, Paynesville City Hall, Monrovia
+          </p>
+          <a href="samuelkpakima2@gmail.com" class="footer__email-address"
+            >slackshack@gmail.com</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

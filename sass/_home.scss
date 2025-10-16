@@ -1,0 +1,792 @@
+.category {
+  padding: 9.6rem 3.2rem;
+  background-color: $color-grey-light-3;
+
+  &__container {
+    position: relative;
+    max-width: 130rem;
+    margin: 0 auto;
+  }
+
+  &__slider {
+    display: grid;
+    grid-template-columns: repeat(7, 20rem);
+    gap: 2.4rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-white;
+    padding: 2.4rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  &__name {
+    font-style: italic;
+  }
+
+  &__img {
+    height: 8rem;
+  }
+
+  &__slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: $color-white;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0rem 1rem 6rem rgba($color-black, 0.3);
+  }
+
+  &__prev-btn {
+    left: 0rem;
+  }
+
+  &__next-btn {
+    right: 0;
+  }
+
+  &__slide-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__heading {
+    font-size: 1.6rem;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+}
+
+// The delicious meals styles
+.meal {
+  padding: 9.6rem 0rem;
+
+  &__container {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0rem 3.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2.4rem;
+  }
+
+  &__item {
+    position: relative;
+    box-shadow: 0rem 0rem 1rem rgba($color-black, 0.4);
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__btn-wish {
+    background: none;
+    border: none;
+
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  &__btn-wish-icon {
+    &--filled {
+      display: none;
+    }
+  }
+
+  &__btn:link,
+  &__btn:visited {
+    text-decoration: none;
+    color: $color-black;
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    line-height: 1;
+    transition: all 0.3s;
+  }
+
+  &__btn-add-to-cart:link,
+  &__btn-add-to-cart:visited {
+    background-color: $color-black;
+    color: $color-white;
+  }
+
+  &__btn-add-to-cart:hover,
+  &__btn-add-to-cart:active {
+    background-color: rgba($color-black, 0.8);
+    cursor: pointer;
+  }
+
+  &__btn-buy:link,
+  &__btn-buy:visited {
+    box-shadow: 0rem 0rem 0rem 1px $color-black;
+  }
+
+  &__btn-buy:hover,
+  &__btn-buy:active {
+    box-shadow: 3px 0rem 0rem 0px $color-black;
+    cursor: pointer;
+  }
+
+  &__btn-icon {
+    height: 1.4rem;
+    width: 1.4rem;
+    fill: $color-white;
+  }
+
+  &__btn-box {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__name {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  &__discount {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1;
+    font-weight: 400;
+  }
+
+  &__price {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1;
+    color: $color-primary;
+  }
+
+  &__img {
+    height: 12rem;
+  }
+
+  &__btn-wish-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__btn-all-meal:link,
+  &__btn-all-meal:visited {
+    font-size: 1.6rem;
+    border-bottom: 1px solid currentColor;
+    line-height: 1;
+    transition: all 0.3s;
+  }
+
+  &__btn-all-meal:hover,
+  &__btn-all-meal:active {
+    cursor: pointer;
+    color: $color-primary !important;
+  }
+
+  &__btn-all-meal--arr {
+    transition: all 0.3s;
+  }
+
+  &__btn-all-meal:hover > &__btn-all-meal--arr {
+    margin-left: 0.5rem;
+  }
+}
+
+// The delivery man section styles
+.delivery {
+  background-color: $color-grey-light-3;
+  padding: 9.6rem 0rem;
+
+  &__container {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0rem 3.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33.33rem, 1fr));
+    gap: 4.8rem;
+    align-items: center;
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+}
+
+// The about section styles
+.about {
+  padding: 9.6rem 0rem;
+
+  &__container {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0rem 3.2rem;
+    @include grid-2-col;
+    gap: 6.4rem;
+    align-items: center;
+
+    @include bp-medium {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    margin-bottom: 1.6rem;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3.2rem;
+  }
+
+  &__btn-read-more:link,
+  &__btn-read-more:visited {
+    line-height: 1;
+    align-self: flex-start;
+    border-bottom: 1px solid currentColor;
+    transition: all 0.3s;
+
+    span {
+      transition: all 0.3s;
+    }
+  }
+
+  &__btn-read-more:hover {
+    color: $color-primary !important;
+    span {
+      display: inline-block;
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+// The testimonal slider styles
+.testimonials {
+  background-color: $color-grey-light-3;
+  padding: 9.6rem 0rem;
+
+  &__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__slider {
+    position: relative;
+    height: 36rem;
+    // IN THE END
+    overflow: hidden;
+    @include bp-small {
+      height: 40rem;
+    }
+  }
+
+  &__testimonial {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    // background-color: $color-white;
+    padding: 6.4rem 12rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    transition: transform 0.5s;
+
+    @include bp-small {
+      padding: 6.4rem 9rem;
+      gap: 1.6rem;
+    }
+
+    &::before {
+      content: "\201C";
+      font-size: 20rem;
+      position: absolute;
+      top: 2rem;
+      left: 5rem;
+      line-height: 1;
+      font-family: inherit;
+      color: rgba($color-primary, 0.1);
+      // z-index: -1;
+    }
+  }
+
+  &__img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+  }
+
+  &__profile {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include bp-small {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__name {
+    font-style: italic;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+
+  &__slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: $color-white;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+  }
+
+  &__slide-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__prev-slide-btn {
+    left: 0rem;
+
+    @include bp-medium {
+      left: 3rem;
+    }
+  }
+
+  &__next-slide-btn {
+    right: 0rem;
+
+    @include bp-medium {
+      right: 3rem;
+    }
+  }
+}
+
+// The lastest meal section styles
+.lastest {
+  padding: 9.6rem 0rem;
+
+  &__container {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 4.8rem;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__meal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0rem 0rem 1rem rgba($color-black, 0.4);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  &__text-box {
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &__title {
+    display: inline-block;
+    line-height: 1;
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: -0.75px;
+  }
+
+  &__btn-read-more:link,
+  &__btn-read-more:visited {
+    align-self: flex-start;
+    border-bottom: 1px solid currentColor;
+    transition: all 0.3s;
+
+    span {
+      transition: all 0.3s;
+    }
+  }
+
+  &__btn-read-more:hover,
+  &__btn-read-more:active {
+    color: $color-primary !important;
+
+    span {
+      display: inline-block;
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+// The gallery section components
+.gallery {
+  padding: 9.6rem 0rem;
+
+  &__container {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0rem 3.2rem;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 8vw);
+    gap: 1rem;
+  }
+
+  &__item {
+    &--1 {
+      grid-column: 1 / 3;
+      grid-row: 1 / 3;
+    }
+
+    &--2 {
+      grid-column: 3 / 4;
+      grid-row: 1 / 3;
+    }
+
+    &--3 {
+      grid-column: 4 / 5;
+      grid-row: 1 / 2;
+    }
+
+    &--4 {
+      grid-column: 5 / -1;
+      grid-row: 1 / 2;
+    }
+
+    &--5 {
+      grid-column: 1 / 2;
+      grid-row: 3 / 5;
+    }
+
+    &--6 {
+      grid-column: 2 / 4;
+      grid-row: 3 / 5;
+    }
+
+    &--7 {
+      grid-column: 4 / 5;
+      grid-row: 2 / 4;
+    }
+
+    &--8 {
+      grid-column: 5 / 6;
+      grid-row: 2 / 3;
+    }
+
+    &--9 {
+      grid-column: 6 / -1;
+      grid-row: 2 / 4;
+    }
+
+    &--10 {
+      grid-column: 5 / 6;
+      grid-row: 3 / 5;
+    }
+
+    &--11 {
+      grid-column: 4 / 5;
+      grid-row: 4 / 5;
+    }
+
+    &--12 {
+      grid-column: 6 / -1;
+      grid-row: 4 / -1;
+    }
+
+    &--13 {
+      grid-column: 1 / 2;
+      grid-row: 5 / 7;
+    }
+
+    &--14 {
+      grid-column: 2 / 5;
+      grid-row: 5 / 7;
+    }
+
+    &--15 {
+      grid-column: 5 / 6;
+      grid-row: 5/ -1;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// The footer section styles
+.footer {
+  padding: 12rem 0rem;
+  background-color: $color-grey-light-3;
+
+  &__newsletter-container {
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 80rem;
+    margin: 0 auto;
+
+    padding: 3.2rem;
+    transform: skewX(-12deg);
+
+    @include bp-medium {
+      max-width: 50rem;
+      transform: skew(0deg);
+    }
+  }
+
+  &__newsletter-container > * {
+    transform: skewX(12deg);
+    @include bp-medium {
+      transform: skew(0deg);
+    }
+  }
+
+  &__newsletter-heading {
+    font-size: 2.4rem;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1;
+  }
+
+  &__newsletter-text {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 1;
+  }
+
+  &__newsletter-text-box {
+    margin-bottom: 2.4rem;
+  }
+
+  &__newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  &__newsletter-input {
+    padding: 1.6rem 3.2rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    background-color: $color-grey-light-3;
+    border-radius: 5px;
+
+    &::placeholder {
+      color: #cacaca;
+    }
+
+    &::-webkit-input-placeholder {
+      color: #666;
+    }
+  }
+
+  &__newsletter-input:focus:invalid {
+    box-shadow: 0rem 0rem 0rem 2px $color-primary;
+    // border: 2px solid $color-primary;
+  }
+
+  &__newsletter-btn {
+    align-self: flex-start;
+    padding: 1.6rem 4rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, $color-primary, $color-black);
+    color: $color-white;
+    transition: all 0.3s;
+  }
+
+  &__newsletter-btn:hover {
+    background: linear-gradient(to left, $color-primary, $color-black);
+    cursor: pointer;
+  }
+
+  &__logo {
+    height: 10rem;
+
+    @include bp-large {
+      height: 8rem;
+    }
+  }
+
+  &__container {
+    max-width: 130rem;
+    padding: 12rem 3.2rem 0rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 4.8rem;
+    align-items: first baseline;
+  }
+
+  &__heading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2.4rem;
+    line-height: 1;
+  }
+
+  &__bio-text {
+    margin: 1.2rem 0rem 3.2rem;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+
+  &__book {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.6rem;
+  }
+
+  %similar {
+    display: inline-block;
+    line-height: 1;
+    font-size: 2rem;
+    font-weight: 500;
+    color: $color-black;
+    font-style: italic;
+  }
+
+  &__book-heading {
+    @extend %similar;
+  }
+
+  &__opening-hour-heading {
+    @extend %similar;
+  }
+
+  &__opening-hour {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  &__nav-list-link:link,
+  &__nav-list-link:visited {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: $color-black;
+    font-size: inherit;
+    line-height: 1.3;
+    font-weight: 400;
+
+    &::after {
+      content: "";
+      width: 0%;
+      opacity: 0;
+      background-color: $color-primary;
+      height: 2px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &__nav-list-link:hover,
+  &__nav-list-link:active {
+    &::after {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+
+  &__address {
+    font-size: inherit;
+    font-weight: inherit;
+    margin-bottom: 1.6rem;
+  }
+
+  &__phone-num {
+    margin-bottom: 1.6rem;
+  }
+
+  &__email-address:link,
+  &__email-address:visited {
+    text-decoration: none;
+    color: $color-black;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: 1;
+    border-bottom: 1px solid $color-black;
+  }
+
+  &__email-address:hover,
+  &__email-address:active {
+    box-shadow: 0rem 0rem 1rem rgba($color-black, 0.5);
+  }
+}
