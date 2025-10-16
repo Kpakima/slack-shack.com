@@ -1,0 +1,125 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 3.2rem;
+  min-height: 8rem;
+  box-shadow: 0rem 1rem 10rem rgba($color-black, 0.1);
+  background-color: rgba($color-white, 0.955);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+
+  &__nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-item {
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+
+  &__nav-link--active:link::after {
+    width: 100%;
+    opacity: 1;
+  }
+
+  &__nav-link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      position: relative;
+      text-decoration: none;
+      color: $color-black;
+      font-size: 1.7rem;
+      font-weight: inherit;
+      line-height: 1.2;
+    }
+
+    &::after {
+      display: inline-block;
+      content: "";
+      width: 0%;
+      opacity: 0;
+      height: 2px;
+      background-color: $color-primary;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transition: all 0.4s ease-in-out;
+    }
+
+    &:hover,
+    &:active {
+      &::after {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__call-now-num {
+    display: inline-block;
+    color: $color-primary;
+    font-size: 1.6rem;
+    font-weight: inherit;
+    line-height: 1;
+  }
+
+  &__call-now-title {
+    display: inline-block;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    line-height: 1;
+  }
+
+  &__call-now-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__icon-box {
+    position: relative;
+  }
+
+  &__icons-box {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  &__logo {
+    height: 8rem;
+  }
+
+  &__icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  &__icon-text {
+    position: absolute;
+    top: -1.5rem;
+    right: -1.5rem;
+    background-color: $color-primary;
+    color: $color-white;
+    font-size: 1.4rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+}

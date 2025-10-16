@@ -1,0 +1,447 @@
+.category {
+  padding: 9.6rem 3.2rem;
+  background-color: $color-grey-light-1;
+
+  &__container {
+    position: relative;
+    max-width: 130rem;
+    margin: 0 auto;
+  }
+
+  &__slider {
+    display: grid;
+    grid-template-columns: repeat(7, 20rem);
+    gap: 2.4rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-white;
+    padding: 2.4rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  &__name {
+    font-style: italic;
+  }
+
+  &__img {
+    height: 8rem;
+  }
+
+  &__slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: $color-white;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0rem 1rem 6rem rgba($color-black, 0.3);
+  }
+
+  &__prev-btn {
+    left: 0rem;
+  }
+
+  &__next-btn {
+    right: 0;
+  }
+
+  &__slide-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__heading {
+    font-size: 1.6rem;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+}
+
+// The delicious meals styles
+.meal {
+  padding: 9.6rem 0rem;
+
+  &__container {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0rem 3.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2.4rem;
+  }
+
+  &__item {
+    position: relative;
+    box-shadow: 0rem 0rem 1rem rgba($color-black, 0.2);
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__btn-wish {
+    background: none;
+    border: none;
+
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  &__btn-wish-icon {
+    &--filled {
+      display: none;
+    }
+  }
+
+  &__btn:link,
+  &__btn:visited {
+    text-decoration: none;
+    color: $color-black;
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    line-height: 1;
+    transition: all 0.3s;
+  }
+
+  &__btn-add-to-cart:link,
+  &__btn-add-to-cart:visited {
+    background-color: $color-black;
+    color: $color-white;
+  }
+
+  &__btn-add-to-cart:hover,
+  &__btn-add-to-cart:active {
+    background-color: rgba($color-black, 0.8);
+    cursor: pointer;
+  }
+
+  &__btn-buy:link,
+  &__btn-buy:visited {
+    box-shadow: 0rem 0rem 0rem 1px $color-black;
+  }
+
+  &__btn-buy:hover,
+  &__btn-buy:active {
+    box-shadow: 3px 0rem 0rem 0px $color-black;
+    cursor: pointer;
+  }
+
+  &__btn-icon {
+    height: 1.4rem;
+    width: 1.4rem;
+    fill: $color-white;
+  }
+
+  &__btn-box {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__name {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  &__discount {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1;
+    font-weight: 400;
+  }
+
+  &__price {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1;
+    color: $color-primary;
+  }
+
+  &__img {
+    height: 12rem;
+  }
+
+  &__btn-wish-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__btn-all-meal:link,
+  &__btn-all-meal:visited {
+    font-size: 1.6rem;
+    border-bottom: 1px solid currentColor;
+    line-height: 1;
+    transition: all 0.3s;
+  }
+
+  &__btn-all-meal:hover,
+  &__btn-all-meal:active {
+    cursor: pointer;
+    color: $color-primary !important;
+  }
+
+  &__btn-all-meal--arr {
+    transition: all 0.3s;
+  }
+
+  &__btn-all-meal:hover > &__btn-all-meal--arr {
+    margin-left: 0.5rem;
+  }
+}
+
+// The delivery man section styles
+.delivery {
+  background-color: $color-grey-light-1;
+  padding: 9.6rem 0rem;
+
+  &__container {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0rem 3.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33.33rem, 1fr));
+    gap: 4.8rem;
+    align-items: center;
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+}
+
+// The about section styles
+.about {
+  padding: 9.6rem 0rem;
+
+  &__container {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0rem 3.2rem;
+    @include grid-2-col;
+    align-items: center;
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    margin-bottom: 1.6rem;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3.2rem;
+  }
+
+  &__btn-read-more:link,
+  &__btn-read-more:visited {
+    line-height: 1;
+    align-self: flex-start;
+    border-bottom: 1px solid currentColor;
+    transition: all 0.3s;
+
+    span {
+      transition: all 0.3s;
+    }
+  }
+
+  &__btn-read-more:hover {
+    color: $color-primary !important;
+    span {
+      display: inline-block;
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+// The testimonal slider styles
+.testimonials {
+  background-color: $color-grey-light-1;
+  padding: 9.6rem 0rem;
+
+  &__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__slider {
+    position: relative;
+    height: 36rem;
+    // IN THE END
+    overflow: hidden;
+  }
+
+  &__testimonial {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: $color-white;
+    padding: 6.4rem 12rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    transition: transform 0.5s;
+
+    &::before {
+      content: "\201C";
+      font-size: 20rem;
+      position: absolute;
+      top: 2rem;
+      left: 5rem;
+      line-height: 1;
+      font-family: inherit;
+      color: rgba($color-primary, 0.1);
+      // z-index: -1;
+    }
+  }
+
+  &__img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+  }
+
+  &__profile {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__name {
+    font-style: italic;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+
+  &__slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: $color-white;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+  }
+
+  &__slide-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__prev-slide-btn {
+    left: -7rem;
+  }
+
+  &__next-slide-btn {
+    right: -7rem;
+  }
+}
+
+// The lastest meal section styles
+.lastest {
+  padding: 9.6rem 0rem;
+
+  &__container {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 4.8rem;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__meal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0rem 0rem 1rem rgba($color-black, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  &__text-box {
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &__title {
+    display: inline-block;
+    line-height: 1;
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: -0.75px;
+  }
+
+  &__btn-read-more:link,
+  &__btn-read-more:visited {
+    align-self: flex-start;
+    border-bottom: 1px solid currentColor;
+    transition: all 0.3s;
+
+    span {
+      transition: all 0.3s;
+    }
+  }
+
+  &__btn-read-more:hover,
+  &__btn-read-more:active {
+    color: $color-primary !important;
+
+    span {
+      display: inline-block;
+      margin-left: 0.5rem;
+    }
+  }
+}
